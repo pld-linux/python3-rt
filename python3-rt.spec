@@ -7,12 +7,12 @@
 Summary:	Python interface to Request Tracker API
 Summary(pl.UTF-8):	-
 Name:		python3-%{module}
-Version:	2.1.1
-Release:	3
+Version:	3.0.0
+Release:	1
 License:	GPL v3
 Group:		Libraries/Python
 Source0:	https://pypi.debian.net/rt/%{module}-%{version}.tar.gz
-# Source0-md5:	8f9590a0948c746fdd0687c9d651c3bf
+# Source0-md5:	d435c28902ed9e50b567adee4b1d8e27
 URL:		https://github.com/CZ-NIC/python-rt
 BuildRequires:	python3-modules >= 1:3.2
 %if %{with tests}
@@ -21,6 +21,8 @@ BuildRequires:	python3-nose
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.714
 %if %{with doc}
+BuildRequires:	python3-furo
+BuildRequires:	python3-sphinx_copybutton
 BuildRequires:	sphinx-pdg-3
 %endif
 Requires:	python3-modules >= 1:3.2
@@ -69,7 +71,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS CHANGES README.rst
+%doc AUTHORS CHANGELOG.md README.rst
 %dir %{py3_sitescriptdir}/%{module}
 %{py3_sitescriptdir}/%{module}/*.py
 # PEP-561
