@@ -8,7 +8,7 @@ Summary:	Python interface to Request Tracker API
 Summary(pl.UTF-8):	-
 Name:		python3-%{module}
 Version:	3.0.0
-Release:	2
+Release:	3
 License:	GPL v3
 Group:		Libraries/Python
 Source0:	https://pypi.debian.net/rt/%{module}-%{version}.tar.gz
